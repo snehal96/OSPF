@@ -1,0 +1,75 @@
+<br /><br /><br />
+<div class="container">
+  <h1>{{ project.title }}</h1>
+  <h3>{{ project.desc }}</h3>
+  <br />
+  <h2>Issues</h2>
+  <br />
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Issue List
+      </mat-panel-title>
+      <mat-panel-description>
+        Concised Issue List for Beginners
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Open issues
+        </mat-panel-title>
+        <mat-panel-description>
+          Currently available to fix: {{ labelOpenIssues.length }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-grid-list cols="3" rowHeight="20rem">
+        <mat-grid-tile
+          *ngFor="let issue of labelOpenIssues"
+          class="issueListStyle"
+        >
+          <app-issue-card [query]="issue"></app-issue-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-expansion-panel>
+    <br />
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Closed Issues
+        </mat-panel-title>
+        <mat-panel-description>
+          Already fixed issues : {{ labelClosedIssues.length }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-grid-list cols="3" rowHeight="20rem">
+        <mat-grid-tile
+          *ngFor="let issue of labelClosedIssues"
+          class="issueListStyle"
+        >
+          <app-issue-card [query]="issue"></app-issue-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+
+  <br />
+  <br />
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        All Open issues
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently available to fix : {{ issues.length }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-grid-list cols="3" rowHeight="20rem">
+      <mat-grid-tile *ngFor="let issue of issues" class="issueListStyle">
+        <app-issue-card [query]="issue"></app-issue-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-expansion-panel>
+  <br />
+</div>

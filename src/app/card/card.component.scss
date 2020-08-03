@@ -1,0 +1,36 @@
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mat-card:hover {
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.15), 1px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mat-card-header {
+  display: unset !important;
+  text-align: center;
+}
+
+.mat-card-content {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mat-card-footer {
+  text-align: center;
+  margin: 0;
+}
+
+.project-card {
+  width: 18vw;
+  min-height: 20rem;
+  max-height: 20rem;
+}
+
+.mat-label {
+  display: unset !important;
+  text-align: center;
+}

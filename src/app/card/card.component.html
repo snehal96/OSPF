@@ -1,0 +1,22 @@
+<mat-card class="project-card" (click)="linkToProjectDetail()">
+  <mat-card-header>
+    <mat-card-title>
+      <!-- <img srtc="project.img" alt="image" /> -->
+      {{ query["title"] }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-label [name]="query.label" class="mat-label"></app-label><br />
+    <p [innerHtml]="query.desc"></p>
+  </mat-card-content>
+  <mat-card-footer class="footer">
+    <a
+      mat-raised-button
+      color="primary"
+      (click)="linkToGithub($event)"
+      [attr.href]="query.link"
+    >
+      Github Repo
+    </a>
+  </mat-card-footer>
+</mat-card>

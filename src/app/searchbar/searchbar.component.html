@@ -1,0 +1,28 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search Project</mat-label>
+    <input
+      matInput
+      [value]="search2"
+      ngxTypeahead
+      [taList]="projectList"
+      [taItemTpl]="myTemp"
+      (taSelected)="selectedTempStatic($event)"
+      class="example-input"
+    />
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="linkToGithub()"
+      class="repo-url"
+    >
+      Github Repo
+    </button>
+  </mat-form-field>
+</form>
+
+<ng-template #myTemp let-item>
+  <mat-list class="item-name">
+    <mat-list-item>{{ item.result.title }}</mat-list-item>
+  </mat-list>
+</ng-template>

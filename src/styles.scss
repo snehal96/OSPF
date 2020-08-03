@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.ta-item {
+  background-color: white;
+  border: 0;
+  height: 40px;
+  width: 60%;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0), 1px 6px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.ta-item:hover {
+  background-color: rgb(190, 190, 190);
+}
+
+.ta-results {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.mat-chip-list-wrapper {
+  display: block !important;
+}
+
+.mat-paginator-container {
+  justify-content: center !important;
+}

@@ -1,0 +1,16 @@
+mat-toolbar {
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+fa-icon {
+  margin-right: 20px;
+  font-size: larger;
+  cursor: pointer;
+}

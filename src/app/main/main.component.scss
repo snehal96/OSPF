@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 99vw;
+  height: 99vh;
+  margin: 5px -2px -2px 5px;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 70%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 70px;
+  padding: 20px 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container p {
+  position: absolute;
+  top: 5%;
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  border: none;
+  width: 85vw;
+  text-align: center;
+  margin: 0 5vw;
+  line-height: 50px;
+  font-weight: bolder;
+}
+
+.container .btn:hover {
+  background-color: black;
+}

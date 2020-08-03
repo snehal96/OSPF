@@ -1,0 +1,12 @@
+<div *ngIf="_router.url != '/'">
+  <mat-toolbar color="primary">
+    <span>Open Source Project Finder for Beginners</span>
+    <span class="example-spacer"></span>
+    <div class="icons">
+      <fa-icon [icon]="faHome" routerLink="/list"></fa-icon>
+      <fa-icon [icon]="faFileUpload" routerLink="/new"></fa-icon>
+      <fa-icon [icon]="faCommentDots" routerLink="/contact"></fa-icon>
+      <fa-icon [icon]="faGithub" routerLink="#"></fa-icon>
+    </div>
+  </mat-toolbar>
+</div>

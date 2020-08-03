@@ -1,0 +1,57 @@
+.ta-results.list-group {
+  //   max-width: 400px;
+  overflow: auto;
+  max-height: 700px;
+  border: none;
+  background-color: white;
+  max-width: 80%;
+}
+.typeahead-wrap .list-group-item {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.typeahead-wrap {
+  width: 100%;
+  text-align: left;
+}
+.typeahead-wrap .list-group-item.active {
+  background-color: white;
+}
+
+.typeahead-wrap .list-group-item .item-name {
+  font-weight: bold;
+}
+.item-name {
+  margin-top: -10px;
+  font-size: large;
+}
+.test {
+  background-color: white;
+}
+
+.example-form {
+  min-width: 50vw;
+  max-width: 50vw;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.repo-url {
+  float: right;
+  margin-top: -35px;
+}
+
+.example-input {
+  font-size: large;
+}

@@ -1,0 +1,15 @@
+<br /><br /><br />
+<div class="container">
+  <app-searchbar></app-searchbar>
+  <mat-grid-list cols="4" rowHeight="25rem">
+    <mat-grid-tile *ngFor="let value of pagedList" class="projectListStyle">
+      <app-card [query]="value"></app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-paginator
+    [length]="project.length"
+    [pageSize]="projectSize"
+    (page)="OnPageChange($event)"
+  >
+  </mat-paginator>
+</div>

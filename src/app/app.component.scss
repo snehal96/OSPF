@@ -1,0 +1,16 @@
+.page {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  width: 100%;
+}
+
+.footer {
+  flex: none;
+  width: 100%;
+  margin: auto auto 0 auto;
+}

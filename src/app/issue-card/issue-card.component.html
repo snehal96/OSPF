@@ -1,0 +1,15 @@
+<mat-card class="project-card">
+  <mat-card-header>
+    <mat-card-title>
+      {{ query["title"] }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="num"><app-label [name]="'#' + query.number"></app-label></p>
+    <br />
+    <p class="num">Updated At: <br />{{ query.updated_at }}</p>
+  </mat-card-content>
+  <mat-card-footer class="footer"
+    ><app-label [name]="'by: ' + query.user.login"></app-label>
+  </mat-card-footer>
+</mat-card>
