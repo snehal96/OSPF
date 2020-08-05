@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { tap, catchError } from "rxjs/operators";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class IssuesService {
   constructor(private http: HttpClient) {}
@@ -38,5 +38,22 @@ export class IssuesService {
     return this.http
       .get(url)
       .pipe(tap(), catchError(this.handleError("getUrls", [])));
+  }
+
+  getIssueComments(query) {
+    var param = query.repository_url.split("/");
+    var url = `https://api.github.com/repos/${param[4]}/${param[5]}/issues/${query.number}/comments`;
+    return this.http
+      .get(url)
+      .pipe(tap(), catchError(this.handleError("getUrls", [])));
+  }
+
+  currIssue: any;
+  setCurrIssue(data) {
+    this.currIssue = data;
+  }
+
+  getCurrIssue() {
+    return this.currIssue;
   }
 }

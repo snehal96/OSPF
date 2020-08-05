@@ -5,7 +5,7 @@ import { IssuesService } from "../services/issues/issues.service";
 @Component({
   selector: "app-projectlistdetails",
   templateUrl: "./projectlistdetails.component.html",
-  styleUrls: ["./projectlistdetails.component.scss"]
+  styleUrls: ["./projectlistdetails.component.scss"],
 })
 export class ProjectlistdetailsComponent implements OnInit {
   constructor(
@@ -20,21 +20,21 @@ export class ProjectlistdetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.project = this.mungellservice.getCurrProject();
-    this.issuesservice.getIssues(this.project.link).subscribe(data => {
+    this.issuesservice.getIssues(this.project.link).subscribe((data) => {
       this.issues = data;
     });
     this.issuesservice
       .getLabelOpenIssues(this.project.link, this.project.label)
-      .subscribe(data => {
+      .subscribe((data) => {
         this.labelOpenIssues = data;
-        console.log(this.labelOpenIssues[0]);
+        // console.log(this.labelOpenIssues[0]);
       });
 
     this.issuesservice
       .getLabelClosedIssues(this.project.link, this.project.label)
-      .subscribe(data => {
+      .subscribe((data) => {
         this.labelClosedIssues = data;
-        console.log(this.labelClosedIssues[0]);
+        // console.log(this.labelClosedIssues[0]);
       });
   }
 

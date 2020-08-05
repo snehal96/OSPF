@@ -21,6 +21,7 @@ import { LabelComponent } from "./label/label.component";
 import { ProjectlistdetailsComponent } from "./projectlistdetails/projectlistdetails.component";
 import { ContactComponent } from "./contact/contact.component";
 import { NewprojectComponent } from "./newproject/newproject.component";
+import { IssuecommentsComponent } from "./issuecomments/issuecomments.component";
 
 import { MatCardModule } from "@angular/material/card";
 import { MatGridListModule } from "@angular/material/grid-list";
@@ -31,7 +32,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatChipsModule } from "@angular/material/chips";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatPaginatorModule } from "@angular/material/paginator";
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from "./footer/footer.component";
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     NewprojectComponent,
     FooterComponent,
+    IssuecommentsComponent,
   ],
   imports: [
     BrowserModule,
