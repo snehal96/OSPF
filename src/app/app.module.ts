@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgxTypeaheadModule } from "ngx-typeahead";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { ShowdownModule } from "ngx-showdown";
 
 import { MungellService } from "./RepoLinks/mungell/mungell.service";
 import { IssueCardComponent } from "./issue-card/issue-card.component";
@@ -69,6 +70,7 @@ import { FooterComponent } from "./footer/footer.component";
     MatExpansionModule,
     FontAwesomeModule,
     MatPaginatorModule,
+    ShowdownModule.forRoot({ emoji: true, noHeaderId: true, flavor: "github" }),
   ],
   providers: [MungellService],
   bootstrap: [AppComponent],

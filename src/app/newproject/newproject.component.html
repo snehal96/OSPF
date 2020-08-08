@@ -1,1 +1,52 @@
-<h1>Page Under Construction</h1>
+<br /><br />
+<br /><br /><br />
+<h1>Submit A New Project</h1>
+<br />
+<div class="form-container">
+  <form [formGroup]="newProjectForm" (ngSubmit)="submitForm()">
+    <mat-form-field appearance="fill">
+      <mat-label>Project Name</mat-label>
+      <input matInput required formControlName="name" />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Project Github Link</mat-label>
+      <input
+        matInput
+        placeholder="https://github.com/snehal96/ospf"
+        formControlName="link"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Label</mat-label>
+      <input
+        matInput
+        formControlName="label"
+        placeholder="comma separated labels"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Programming Language</mat-label>
+      <input
+        matInput
+        formControlName="lang"
+        placeholder="Most used programming language"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        required
+        formControlName="desc"
+        placeholder="Description of the project"
+        rows="8"
+      ></textarea>
+    </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</div>

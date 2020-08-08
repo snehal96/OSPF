@@ -20,7 +20,6 @@
       name="contact"
       subject="A Message From Personal Website"
       netlify
-      netlify-honeypot="bot-field"
       hidden
     >
       <input type="text" name="name" />
@@ -28,6 +27,9 @@
       <input type="email" name="email" />
       <input type="text" name="tid" />
       <input type="number" name="contact" />
+      <div>
+        <div data-netlify-recaptcha="true"></div>
+      </div>
     </form>
     <app-root></app-root>
   </body>

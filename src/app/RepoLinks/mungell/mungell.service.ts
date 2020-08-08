@@ -107,6 +107,12 @@ export class MungellService {
 
   getImage(query) {}
 
+  addNewProject(project) {
+    this.data.push(project);
+    sessionStorage.setItem("projectList", JSON.stringify(this.data));
+    // addToSource();
+  }
+
   getData() {
     return this.data;
   }

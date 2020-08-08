@@ -19,6 +19,12 @@ export class ProjectlistdetailsComponent implements OnInit {
   labelClosedIssues: any;
 
   ngOnInit(): void {
+    console.log(this.labelOpenIssues);
+    if (this.labelOpenIssues == undefined) {
+      this.labelOpenIssues = [];
+      this.labelClosedIssues = [];
+      this.issues = [];
+    }
     this.project = this.mungellservice.getCurrProject();
     this.issuesservice.getIssues(this.project.link).subscribe((data) => {
       this.issues = data;

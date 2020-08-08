@@ -1,0 +1,39 @@
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.comment-container {
+  width: 80vw;
+  border-left: 3px solid gray;
+  margin: auto;
+  z-index: 0;
+}
+
+ul {
+  list-style: none;
+  width: calc(100% + 2vw);
+  margin: 0 -5vw;
+}
+
+li {
+  margin-bottom: 40px;
+}
+
+mat-card {
+  background-color: lightblue;
+}
+
+.creator-card {
+  margin-left: -2%;
+  margin-bottom: 40px;
+  background-color: wheat;
+}

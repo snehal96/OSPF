@@ -9,10 +9,24 @@ import { IssuesService } from "../services/issues/issues.service";
 export class IssuecommentsComponent implements OnInit {
   constructor(private issueservice: IssuesService) {}
 
+  comments: any;
+  query: any;
+
   ngOnInit(): void {
-    var query = this.issueservice.getCurrIssue();
-    this.issueservice.getIssueComments(query).subscribe((data) => {
-      console.log(data);
+    this.query = this.issueservice.getCurrIssue();
+    console.log(this.query);
+    this.issueservice.getIssueComments(this.query).subscribe((data) => {
+      // for (var d in data) {
+      //   data[d]["body"] = this.urlify(data[d]["body"]);
+      // }
+      this.comments = data;
+    });
+  }
+
+  urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function (url) {
+      return '<a href="' + url + '">' + url + "</a>";
     });
   }
 }
