@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { tap, catchError } from "rxjs/operators";
 
@@ -12,6 +12,8 @@ const url =
 })
 export class MungellService {
   currProject: any;
+  content: any;
+  sha: any;
 
   constructor(private http: HttpClient) {}
 
@@ -31,8 +33,10 @@ export class MungellService {
   data: any;
   setData() {
     this.getMarkdown().subscribe(async (data) => {
-      var content = atob(data.content);
-      var page = content.split("##");
+      this.sha = data.sha;
+      this.content = atob(data.content);
+      // console.log(this.content);
+      var page = this.content.split("##");
 
       var projectList = [];
       for (var i = 2; i < page.length; i++) {
@@ -110,7 +114,6 @@ export class MungellService {
   addNewProject(project) {
     this.data.push(project);
     sessionStorage.setItem("projectList", JSON.stringify(this.data));
-    // addToSource();
   }
 
   getData() {

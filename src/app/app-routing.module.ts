@@ -6,6 +6,7 @@ import { ProjectlistdetailsComponent } from "./projectlistdetails/projectlistdet
 import { NewprojectComponent } from "./newproject/newproject.component";
 import { ContactComponent } from "./contact/contact.component";
 import { IssuecommentsComponent } from "./issuecomments/issuecomments.component";
+import { SuccessComponent } from "./success/success.component";
 
 const routes: Routes = [
   { path: "list", component: ProjectlistComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "new", component: NewprojectComponent },
   { path: "contact", component: ContactComponent },
   { path: "", component: MainComponent },
+  { path: "success", component: SuccessComponent },
   { path: "", redirectTo: "/", pathMatch: "full" },
 ];
 

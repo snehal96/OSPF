@@ -34,6 +34,7 @@ import { MatChipsModule } from "@angular/material/chips";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { FooterComponent } from "./footer/footer.component";
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FooterComponent } from "./footer/footer.component";
     NewprojectComponent,
     FooterComponent,
     IssuecommentsComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,22 @@
         <div data-netlify-recaptcha="true"></div>
       </div>
     </form>
+
+    <form
+      name="newProjectForm"
+      subject="Request for New Project Addition"
+      netlify
+      hidden
+    >
+      <input type="text" name="name" />
+      <input type="text" name="link" />
+      <input type="text" name="label" />
+      <input type="text" name="lang" />
+      <textarea name="desc"></textarea>
+      <div>
+        <div data-netlify-recaptcha="true"></div>
+      </div>
+    </form>
     <app-root></app-root>
   </body>
 </html>

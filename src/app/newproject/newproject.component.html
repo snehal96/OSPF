@@ -3,10 +3,15 @@
 <h1>Submit A New Project</h1>
 <br />
 <div class="form-container">
-  <form [formGroup]="newProjectForm" (ngSubmit)="submitForm()">
+  <form
+    [formGroup]="newProjectForm"
+    (ngSubmit)="submitForm()"
+    method="POST"
+    data-netlify="true"
+  >
     <mat-form-field appearance="fill">
       <mat-label>Project Name</mat-label>
-      <input matInput required formControlName="name" />
+      <input matInput required formControlName="name" name="name" />
     </mat-form-field>
     <br />
     <mat-form-field appearance="fill">
@@ -15,6 +20,8 @@
         matInput
         placeholder="https://github.com/snehal96/ospf"
         formControlName="link"
+        name="link"
+        required
       />
     </mat-form-field>
     <br />
@@ -24,6 +31,8 @@
         matInput
         formControlName="label"
         placeholder="comma separated labels"
+        name="label"
+        required
       />
     </mat-form-field>
     <br />
@@ -33,6 +42,8 @@
         matInput
         formControlName="lang"
         placeholder="Most used programming language"
+        name="lang"
+        required
       />
     </mat-form-field>
     <br />
@@ -44,9 +55,15 @@
         formControlName="desc"
         placeholder="Description of the project"
         rows="8"
+        name="desc"
       ></textarea>
     </mat-form-field>
     <br />
+    <div>
+      <div data-netlify-recaptcha="true"></div>
+    </div>
+    <br />
     <button mat-raised-button color="primary" type="submit">Submit</button>
+    <br />
   </form>
 </div>
