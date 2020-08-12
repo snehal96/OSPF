@@ -1,23 +1,27 @@
-<br /><br /><br />
-<h1>#{{ query.number }}-{{ query.title }}</h1>
-<br />
-<div class="comment-container">
-  <mat-card class="creator-card">
-    <mat-card-header>
-      <div mat-card-avatar>
-        <img [src]="query.user.avatar_url" alt="DP" />
-      </div>
-      <mat-card-title>
-        {{ query.user.login }} - {{ query.author_association }}
-      </mat-card-title>
-      <mat-card-subtitle>Created On: {{ query.created_at }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <!-- <p [innerHtml]="query.body"></p> -->
-      <showdown [value]="query.body"></showdown>
-    </mat-card-content>
-  </mat-card>
-  <ul>
+<div class="main-container">
+  <br /><br /><br />
+  <h1>#{{ query.number }}-{{ query.title }}</h1>
+  <br />
+
+  <div class="comment-container">
+    <mat-card class="creator-card">
+      <mat-card-header>
+        <div mat-card-avatar>
+          <img [src]="query.user.avatar_url" alt="DP" />
+        </div>
+        <mat-card-title>
+          {{ query.user.login }} - {{ query.author_association }}
+        </mat-card-title>
+        <mat-card-subtitle
+          >Created On: {{ query.created_at }}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <!-- <p [innerHtml]="query.body"></p> -->
+        <showdown [value]="query.body"></showdown>
+      </mat-card-content>
+    </mat-card>
+    <!-- <ul> -->
     <li *ngFor="let comment of comments">
       <mat-card>
         <mat-card-header>
@@ -35,5 +39,6 @@
         </mat-card-content>
       </mat-card>
     </li>
-  </ul>
+    <!-- </ul> -->
+  </div>
 </div>

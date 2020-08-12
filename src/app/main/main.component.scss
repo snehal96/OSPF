@@ -43,3 +43,37 @@
 .container .btn:hover {
   background-color: black;
 }
+
+@media screen and (max-width: 800px) {
+  .container .btn {
+    position: absolute;
+    top: 70%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 50px;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container .btn {
+    position: absolute;
+    top: 80%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 45px;
+    padding: 12.5px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}

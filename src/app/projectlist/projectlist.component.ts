@@ -15,6 +15,8 @@ export class ProjectlistComponent implements OnInit {
   project: any;
   pagedList: any;
   projectSize: any;
+  col: any;
+  row: any;
 
   constructor(
     private http: HttpClient,
@@ -29,8 +31,24 @@ export class ProjectlistComponent implements OnInit {
       this.project = this.mungellservice.getData();
     }
 
-    this.pagedList = this.project.slice(0, 40);
-    this.projectSize = 40;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    if (w < 800) {
+      this.projectSize = 20;
+      this.col = 2;
+      this.row = "25rem";
+      if (w < 500) {
+        this.col = 1;
+        this.row = "20rem";
+      }
+    } else {
+      this.projectSize = 40;
+      this.row = "25rem";
+      this.col = 4;
+    }
+
+    this.pagedList = this.project.slice(0, this.projectSize);
   }
 
   OnPageChange(event: PageEvent) {

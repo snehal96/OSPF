@@ -23,7 +23,7 @@
           Currently available to fix: {{ labelOpenIssues.length }}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <mat-grid-list cols="3" rowHeight="20rem">
+      <mat-grid-list [cols]="col" rowHeight="20rem">
         <mat-grid-tile
           *ngFor="let issue of labelOpenIssues"
           class="issueListStyle"
@@ -42,7 +42,7 @@
           Already fixed issues : {{ labelClosedIssues.length }}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <mat-grid-list cols="3" rowHeight="20rem">
+      <mat-grid-list [cols]="col" rowHeight="20rem">
         <mat-grid-tile
           *ngFor="let issue of labelClosedIssues"
           class="issueListStyle"
@@ -65,7 +65,7 @@
         Currently available to fix : {{ issues.length }}
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <mat-grid-list cols="3" rowHeight="20rem">
+    <mat-grid-list [cols]="col" rowHeight="20rem">
       <mat-grid-tile *ngFor="let issue of issues" class="issueListStyle">
         <app-issue-card [query]="issue"></app-issue-card>
       </mat-grid-tile>

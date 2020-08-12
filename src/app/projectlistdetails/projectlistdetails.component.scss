@@ -13,3 +13,9 @@ h1 {
 mat-panel-title {
   font-weight: bolder;
 }
+
+@media screen and( max-width: 500px) {
+  .container {
+    margin-top: 55px;
+  }
+}

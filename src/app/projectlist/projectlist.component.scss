@@ -6,3 +6,11 @@
   padding: 1%;
   background-color: #f7f7fc;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 1%;
+    background-color: #f7f7fc;
+    margin-top: 15px;
+  }
+}

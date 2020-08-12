@@ -38,3 +38,11 @@
 .num {
   text-align: center;
 }
+
+@media screen and (max-width: 500px) {
+  .project-card {
+    width: 50vw;
+    min-height: 15rem;
+    max-height: 15rem;
+  }
+}

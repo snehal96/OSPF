@@ -1,7 +1,7 @@
-<div *ngIf="_router.url != '/'">
+<div *ngIf="_router.url != '/'" class="container">
   <mat-toolbar color="primary" class="footer">
     <span>
-      Developed and Maintained by
+      Developed and Maintained by <br *ngIf="mobile" />
       <a class="maintainer" href="profile">Snehal Maheshwari</a>
     </span>
   </mat-toolbar>

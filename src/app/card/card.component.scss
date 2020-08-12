@@ -34,3 +34,19 @@
   display: unset !important;
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+  .project-card {
+    width: 45vw;
+    min-height: 20rem;
+    max-height: 20rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project-card {
+    width: 70vw;
+    min-height: 15rem;
+    max-height: 15rem;
+  }
+}

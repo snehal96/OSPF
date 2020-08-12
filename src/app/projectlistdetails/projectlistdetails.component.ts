@@ -17,6 +17,8 @@ export class ProjectlistdetailsComponent implements OnInit {
   issues: any;
   labelOpenIssues: any;
   labelClosedIssues: any;
+  col: any;
+  row: any;
 
   ngOnInit(): void {
     console.log(this.labelOpenIssues);
@@ -42,6 +44,15 @@ export class ProjectlistdetailsComponent implements OnInit {
         this.labelClosedIssues = data;
         // console.log(this.labelClosedIssues[0]);
       });
+
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    if (w < 800) {
+      this.col = 1;
+    } else {
+      this.col = 3;
+    }
   }
 
   getLabelIssues(data) {}

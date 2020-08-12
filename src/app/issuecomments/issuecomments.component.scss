@@ -1,10 +1,3 @@
-h1 {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 25px;
-}
-
 img {
   height: 40px;
   width: 40px;
@@ -18,14 +11,19 @@ img {
   z-index: 0;
 }
 
-ul {
-  list-style: none;
-  width: calc(100% + 2vw);
-  margin: 0 -5vw;
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 25px;
 }
 
 li {
+  margin: 0 -1.5vw;
   margin-bottom: 40px;
+  list-style: none;
+  width: calc(100% + 2vw);
+  padding: 0;
 }
 
 mat-card {
@@ -36,4 +34,18 @@ mat-card {
   margin-left: -2%;
   margin-bottom: 40px;
   background-color: wheat;
+}
+
+@media screen and (max-width: 500px) {
+  .main-container {
+    margin-top: 25px;
+  }
+
+  li {
+    list-style: none;
+    width: calc(100% + 1vw);
+    padding: 0;
+    margin: 0 -1vw;
+    margin-bottom: 25px;
+  }
 }
