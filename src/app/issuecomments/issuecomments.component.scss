@@ -15,7 +15,9 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+  margin: auto;
   margin-top: 25px;
+  width: 95vw;
 }
 
 li {
@@ -43,9 +45,9 @@ mat-card {
 
   li {
     list-style: none;
-    width: calc(100% + 1vw);
+    width: calc(100% + 1.5vw);
     padding: 0;
-    margin: 0 -1vw;
+    margin: 0 -1.5vw;
     margin-bottom: 25px;
   }
 }

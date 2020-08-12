@@ -14,8 +14,6 @@ export class IssuecommentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.query = this.issueservice.getCurrIssue();
-    console.log(this.query.body);
-    console.log(this.query);
     this.issueservice.getIssueComments(this.query).subscribe((data) => {
       // for (var d in data) {
       //   data[d]["body"] = this.urlify(data[d]["body"]);
