@@ -35,3 +35,8 @@ body {
 .mat-paginator-container {
   justify-content: center !important;
 }
+
+pre {
+  overflow: auto;
+  scrollbar-width: none;
+}

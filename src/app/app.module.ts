@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgxTypeaheadModule } from "ngx-typeahead";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { ShowdownModule } from "ngx-showdown";
+import * as Showdown from "showdown";
+// import * as highlightExtension from "showdown-highlight";
 
 import { MungellService } from "./RepoLinks/mungell/mungell.service";
 import { IssueCardComponent } from "./issue-card/issue-card.component";
@@ -34,7 +36,13 @@ import { MatChipsModule } from "@angular/material/chips";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { FooterComponent } from "./footer/footer.component";
-import { SuccessComponent } from './success/success.component';
+import { SuccessComponent } from "./success/success.component";
+
+let mdToSdExtension: Showdown.RegexReplaceExtension = {
+  type: "lang",
+  regex: new RegExp("`Markdown`", "g"),
+  replace: "`Showdown`",
+};
 
 @NgModule({
   declarations: [
@@ -72,7 +80,12 @@ import { SuccessComponent } from './success/success.component';
     MatExpansionModule,
     FontAwesomeModule,
     MatPaginatorModule,
-    ShowdownModule.forRoot({ emoji: true, noHeaderId: true, flavor: "github" }),
+    ShowdownModule.forRoot({
+      emoji: true,
+      underline: true,
+      flavour: "github",
+      extensions: [mdToSdExtension],
+    }),
   ],
   providers: [MungellService],
   bootstrap: [AppComponent],

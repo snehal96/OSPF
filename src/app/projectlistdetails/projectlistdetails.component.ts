@@ -49,7 +49,10 @@ export class ProjectlistdetailsComponent implements OnInit {
     var h = window.innerHeight;
 
     if (w < 800) {
-      this.col = 1;
+      this.col = 2;
+      if (w < 500) {
+        this.col = 1;
+      }
     } else {
       this.col = 3;
     }

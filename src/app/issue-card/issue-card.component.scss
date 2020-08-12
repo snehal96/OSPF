@@ -39,6 +39,14 @@
   text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+  .project-card {
+    width: 30vw;
+    min-height: 15rem;
+    max-height: 15rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .project-card {
     width: 50vw;
